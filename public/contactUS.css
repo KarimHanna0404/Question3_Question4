@@ -1,0 +1,44 @@
+body{
+
+    background-color: powderblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    
+
+}
+
+.contrainer{
+
+    width: 80%;
+    margin: 50px auto;
+
+}
+
+.contact-box{
+
+    background-color: white;
+    display: flex;
+
+}
+
+.contact-right{
+    flex-basis: 60%;
+    padding: 60px;
+    background-color: rgb(246, 198, 109);
+}
+
+
+.contact-left{
+
+    flex-basis: 60%;
+    padding: 40px 60px;
+    background-color: white;
+}
+
+h1{
+
+    margin-bottom: 10px;
+}
+
+.container p{
+    margin-bottom: 40px;
+}

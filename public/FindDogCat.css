@@ -1,0 +1,22 @@
+body{
+
+    background-color: powderblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+
+}
+
+.fieldset1{
+
+    border-radius: 10px;
+    padding: 10px;
+    border-width: 5px;
+}
+
+
+.fieldset2{
+
+    border-radius: 10px;
+    padding: 10px;
+    border-width: 5px;
+}

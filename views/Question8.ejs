@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 1_question8</title>
+    <link rel="stylesheet" href="question8.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <div>
+            <ul class="nav" style="list-style-type: none;">
+                <li><a href="home">Home</a></li>
+                <li><a href="findDogCat">Find a dog/cat</a></li>
+                <li><a href="petCare">Dog/cat care</a></li>
+                <li><a href="petGiveAway" id="giveaway-button">Pet giveaway</a></li>
+                <li><a href="contactUs">Contact us</a></li>
+                <% if (isLoggedIn) { %>
+                    <li><a href="logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="createAccount">Create an account</a></li>
+                <% } %>
+            </ul>
+        </div>
+        <div>
+            <img class="imgStyle" src="images/CatDog.jpg" alt="Cat and Dog">
+        </div>
+    </main>
+    
+    <%- include('partials/footer') %>
+    <script src="js/Question8.js" charset="utf-8"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Browse Available Pets</title>
+    <link rel="stylesheet" href="question8.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <div>
+            <ul class="nav" style="list-style-type: none;">
+                <li><a href="home">Home</a></li>
+                <li><a href="findDogCat">Find a dog/cat</a></li>
+                <li><a href="petCare">Dog/cat care</a></li>
+                <li><a href="petGiveAway" id="giveaway-button">Pet giveaway</a></li>
+                <li><a href="contactUs">Contact us</a></li>
+                <% if (isLoggedIn) { %>
+                    <li><a href="logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="createAccount">Create an account</a></li>
+                <% } %>
+            </ul>
+        </div>
+        
+        <div class="movbox">
+            <h2>Please Click On The Animal You Are Interested In!</h2>
+            <div class="container5">
+                <% pets.forEach(pet => { %>
+                    <div class="animals">
+                        <p><%= pet.name %></p>
+                        <img src="<%= pet.type === 'cat' ? '/images/Bengal-Cat.jpg' : '/images/labrador-retriever-dog-breed-info.jpeg' %>" style="width: 100px;">
+                        <P>Type: <%= pet.type.charAt(0).toUpperCase() + pet.type.slice(1) %></P>
+                        <p>Breed: <%= pet.breed %></p> 
+                        <p>Preferred Gender: <%= pet.gender.charAt(0).toUpperCase() + pet.gender.slice(1) %></p>
+                        <p>Suitable for a family with small children: <%= pet.suitableForChildren %></p>
+                        <p>Current owner's name: <%= pet.ownerName %></p>
+                        <p>Current owner's Email: <%= pet.ownerEmail %></p>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </main>
+
+    <%- include('partials/footer') %> 
+
+    <script src="js/Question8.js" charset="utf-8"></script>   
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="question8.css">
+</head>
+<body >
+    <%- include('partials/header') %>
+    <main>
+
+        <div>
+            <ul class="nav" style="list-style-type: none;">
+                <li><a href="home">Home</a></li>
+                <li><a href="findDogCat">Find a dog/cat</a></li>
+                <li><a href="petCare">Dog/cat care</a></li>
+                <li><a href="petGiveAway" id="giveaway-button">Pet giveaway</a></li>
+                <li><a href="contactUs">Contact us</a></li>
+                <% if (isLoggedIn) { %>
+                    <li><a href="logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="createAccount">Create an account</a></li>
+                <% } %>
+            </ul>
+        </div>
+    
+  <div style="position: relative; top: -800px; left: 370px;">
+
+
+        <h1>Disclaimer</h1>
+
+        
+        <p>
+            We value your privacy and are committed to protecting your personal information. 
+            Any data you provide on this website will be used solely for the purpose of enhancing 
+            your experience and delivering our services. 
+            We promise that your information will not be shared, sold, or used for any other purpose without your explicit consent.
+            Your trust is important to us, and we adhere to strict privacy 
+            policies to ensure your data remains secure. For more details, 
+            please refer to our <a href="privacy-policy.html">Privacy Policy</a>.
+        </p>
+        <img class="imgDisclaimer" src="images/561739.png" alt="Warning Sign" />
+        
+        
+         
+</div>
+
+
+        
+
+
+    </div>
+
+</div>
+
+</main>
+  
+<div style="position: relative; top: 129px;">
+        <%- include('partials/footer') %>   
+</div>
+
+<script src="js/Question8.js" charset="utf-8"></script>
+
+</body>
+</html>

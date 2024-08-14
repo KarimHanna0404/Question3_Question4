@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 1_question3</title>
+    <link rel="stylesheet" href="question8.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <div>
+            <ul class="nav" style="list-style-type: none;">
+                <li><a href="home">Home</a></li>
+                <li><a href="findDogCat">Find a dog/cat</a></li>
+                <li><a href="petCare">Dog/cat care</a></li>
+                <li><a href="petGiveAway" id="giveaway-button">Pet giveaway</a></li>
+                <li><a href="contactUs">Contact us</a></li>
+                <% if (isLoggedIn) { %>
+                    <li><a href="logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="createAccount">Create an account</a></li>
+                <% } %>
+            </ul>
+        </div>
+
+    
+    <div class="movbox2">
+
+    <div style="position: relative; top:-20px;">
+
+    
+   <h1>Find a dog/cat 
+    <a href="https://www.freepik.com/free-vector/cat-dog-cartoon_5039125.htm" target="_blank">
+        <img src="images/b88c50d693e2037e07e2a4c462c4cf5b.png" style="width:100px">
+    </a>
+    </h1>
+
+    <fieldset class="fieldset1">
+       <legend>Find a pet now!</legend>
+      
+        
+           
+       <form action="" onclick="isEmpty()" id="PetForm1">
+            <p>
+                Would you like to adop a cat or dog?
+                <select name="age">
+                   <option value="cat">Cat</option>
+                   <option value="dog">Dog</option>
+                </select>
+             </p>
+
+             <p>
+                Do you want it to get along with other dogs/cat/small children?
+                <select name="age">
+                   <option value="yes">yes</option>
+                   <option value="no">no</option>
+                </select>
+             </p>
+
+                <p>
+            Preferred Gender:
+            <label><input type="radio" name="gender" value="female"/> Female</label>
+            <label><input type="radio" name="gender" value="male"/> Male</label>
+            </p>
+
+
+            
+
+        </form>
+
+            
+    </fieldset>
+
+    <br>
+
+    <fieldset class="fieldset2">
+        <legend>Let's get to know what you want</legend>
+
+        <form action=""  name="Frm1">
+
+            <p>Which of the following cat breed would you like (choose only if you picked adopt a cat)</p>
+            <p>
+                <label><input onclick="isEmpty()" type="checkbox" value="siamese" name="cat-breed1" /> Siamese</label>
+                <label><input onclick="isEmpty()"type="checkbox" value="persian" name="cat-breed2"/> Persian</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="maine-coon" name="cat-breed3"/> Maine Coon</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="ragdoll" name="cat-breed4"/> Ragdoll</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="bengal" name="cat-breed5"/> Bengal</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="sphynx" name="cat-breed6"/> Sphynx</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="does not matter" name="does-not-matter"/> does not matter</label>
+            </p>
+            
+            <p>Which of the following dog breed would you like (choose only if you picked adopt a dog)</p>
+            <p>
+                <label><input onclick="isEmpty()" type="checkbox" value="labrador" name="dog-breed1"/> Labrador Retriever</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="german-shepherd" name="dog-breed2"/> German Shepherd</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="golden-retriever" name="dog-breed3"/> Golden Retriever</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="bulldog" name="dog-breed4"/> Bulldog</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="beagle" name="dog-breed5"/> Beagle</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="poodle" name="dog-breed6"/> Poodle</label>
+                <label><input onclick="isEmpty()" type="checkbox" value="does not matter" name="does-not-matter2"/> does not matter</label>
+
+            
+            </p>
+
+        </form>
+    </fieldset>
+
+    <form name="Frm2">
+        <p>
+            <input onclick="isEmpty()" type="submit" value="Submit"/>
+            <input onclick="isEmpty()" type="reset" value="Reset"/>
+        </p>
+
+    </form>
+</div>
+    </div>
+</main>
+
+    <%- include('partials/footer') %> 
+  
+    
+<script src="js/Question8.js" charset="utf-8"></script>
+</body>
+</html>

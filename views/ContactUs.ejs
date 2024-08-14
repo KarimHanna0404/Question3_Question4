@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="question8.css">
+</head>
+<body >
+    <%- include('partials/header') %>
+    <main>
+
+        <div>
+            <ul class="nav" style="list-style-type: none;">
+                <li><a href="home">Home</a></li>
+                <li><a href="findDogCat">Find a dog/cat</a></li>
+                <li><a href="petCare">Dog/cat care</a></li>
+                <li><a href="petGiveAway" id="giveaway-button">Pet giveaway</a></li>
+                <li><a href="contactUs">Contact us</a></li>
+                <% if (isLoggedIn) { %>
+                    <li><a href="logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="createAccount">Create an account</a></li>
+                <% } %>
+            </ul>
+        </div>
+    
+  <div style="position: relative; top: -800px; left: 170px;">
+
+
+  
+    <div class="container">
+
+        <h1>Connect With us</h1>
+        <p>we would love to hear from you feel free to get in touch </p>
+    </div>
+
+    <div class="contact-box">
+
+        <div class="contact-left">
+
+            <h3>
+                send your request
+
+            </h3>
+
+            <form action=""></form>
+            <fieldset>
+            <P>
+                <label>Email: <input type="text" /> </label>
+
+                <label> Name:<input type="text" /> </label>
+                
+
+
+
+               
+                
+
+               
+
+            </P>
+            </form>
+
+            <form>
+                <p>
+                    <input type="submit" value="Submit"/>
+                    <input type="reset" value="Reset"/>
+                </p>
+        
+            </form>
+
+            </fieldset>
+           
+
+
+
+         
+        </div>
+
+        <div class="contact-right">
+
+            <h3>
+                reach us on the following:
+
+            </h3>
+
+            <ul>
+                <li>name: Karim Hanna</li>
+                <li>email: rimokarma@gmail.com</li>
+            </ul>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</main>
+  
+<div style="position: relative; top: 129px;">
+        <%- include('partials/footer') %> 
+     
+</div>
+
+<script src="js/Question8.js" charset="utf-8"></script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+.nav li{
+    background-color: rgb(187, 193, 193);
+    padding: 10px;
+    margin: 1px;
+    width: 100px;
+   
+    cursor: pointer;
+   
+
+
+}
+.nav {
+    padding:0;
+    margin:0;
+}
+
+.nav li.active{
+    background-color: rgb(32, 233, 166);
+
+
+}
+.nav li:hover{
+    background-color: aquamarine;
+}

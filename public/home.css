@@ -1,0 +1,29 @@
+body {
+    background-color: powderblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 40px 60px;
+    margin: 20px auto; 
+    border-radius: 10px;
+    border-style: solid;
+    max-width: 600px; 
+    width: 100%; 
+    text-align: center; 
+    
+}
+
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 1_question3</title>
+    <link rel="stylesheet" href="question8.css">
+</head>
+<body>
+
+    <%- include('partials/header') %>
+
+    <main>
+        <div>
+            <ul class="nav" style="list-style-type: none;">
+                <li><a href="home">Home</a></li>
+                <li><a href="findDogCat">Find a dog/cat</a></li>
+                <li><a href="petCare">Dog/cat care</a></li>
+                <li><a href="petGiveAway" id="giveaway-button">Pet giveaway</a></li>
+                <li><a href="contactUs">Contact us</a></li>
+                <% if (isLoggedIn) { %>
+                    <li><a href="logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="createAccount">Create an account</a></li>
+                <% } %>
+            </ul>
+        </div>
+    
+        <div style="position: relative; left: 470px; top: -800px;">
+            <h1>Pet Give away
+                <a href="https://www.freepik.com/free-vector/cat-dog-cartoon_5039125.htm" target="_blank">
+                    <img src="/images/b88c50d693e2037e07e2a4c462c4cf5b.png" style="width:100px">
+                </a>
+            </h1>
+            <fieldset class="fieldset2">
+                <legend style="font: bold;">Let's get to know what you want ! </legend>
+              
+                <form id="PetForm2" name="frm1" method="post">
+                    <p>Are you looking for a cat or dog?
+                        <select name="type" id="animal-type" required>
+                            <option value="select">Select</option>
+                            <option value="cat">Cat</option>
+                            <option value="dog">Dog</option>
+                        </select>
+                    </p>
+
+                    <p id="cat-breed">Which of the following cat breed would you like (choose only if you picked adopt a cat)</p>
+                    <p>
+                        <label><input type="checkbox" value="siamese" name="cat-breed" class="cat-breed-checkbox"/> Siamese</label>
+                        <label><input type="checkbox" value="persian" name="cat-breed" class="cat-breed-checkbox"/> Persian</label>
+                        <label><input type="checkbox" value="maine-coon" name="cat-breed" class="cat-breed-checkbox"/> Maine Coon</label>
+                        <label><input type="checkbox" value="ragdoll" name="cat-breed" class="cat-breed-checkbox"/> Ragdoll</label>
+                        <label><input type="checkbox" value="bengal" name="cat-breed" class="cat-breed-checkbox"/> Bengal</label>
+                        <label><input type="checkbox" value="sphynx" name="cat-breed" class="cat-breed-checkbox"/> Sphynx</label>
+                        <label><input type="checkbox" value="does not matter" name="cat-breed" class="cat-breed-checkbox"/> Does not matter</label>
+                    </p>
+                    
+                    <p id="dog-breed">Which of the following dog breed would you like (choose only if you picked adopt a dog)</p>
+                    <p>
+                        <label><input type="checkbox" value="labrador" name="dog-breed" class="dog-breed-checkbox"/> Labrador Retriever</label>
+                        <label><input type="checkbox" value="german-shepherd" name="dog-breed" class="dog-breed-checkbox"/> German Shepherd</label>
+                        <label><input type="checkbox" value="golden-retriever" name="dog-breed" class="dog-breed-checkbox"/> Golden Retriever</label>
+                        <label><input type="checkbox" value="bulldog" name="dog-breed" class="dog-breed-checkbox"/> Bulldog</label>
+                        <label><input type="checkbox" value="beagle" name="dog-breed" class="dog-breed-checkbox"/> Beagle</label>
+                        <label><input type="checkbox" value="poodle" name="dog-breed" class="dog-breed-checkbox"/> Poodle</label>
+                        <label><input type="checkbox" value="does not matter" name="dog-breed" class="dog-breed-checkbox"/> Does not matter</label>
+                    </p>
+
+                    <p id="gender">Preferred Gender:
+                        <label><input type="radio" name="gender" value="female" required/> Female</label>
+                        <label><input type="radio" name="gender" value="male" required/> Male</label>
+                    </p>
+
+                    <p id="family">Suitable for a family with small children:
+                        <label><input type="checkbox" name="suitable-for-children" value="yes"/> Yes</label>
+                        <label><input type="checkbox" name="suitable-for-children" value="no"/> No</label>
+                    </p>
+
+                    <p id="brag-about-your-pet">Brag about your pet!:
+                        <label><input type="text" name="brag" placeholder="Example: my dog sits" required/></label>
+                    </p>
+
+                    <p id="owner-name">Current owner's name:
+                        <label><input type="text" name="owners-name" placeholder="Family and given name" required/></label>
+                    </p>
+
+                    <p id="owner-email">Current owner's Email:
+                        <label><input type="email" name="owners-email" placeholder="Ex: abc@gmail.com" required/></label>
+                    </p>
+
+                    <p>
+                        <input type="submit" value="Submit"/>
+                        <input type="reset" value="Reset"/>
+                    </p>
+                </form>
+            </fieldset>
+        </div>
+
+    </main>
+
+    <div style="position: relative; top: -15px;">
+        <%- include('partials/footer') %> 
+    </div>
+
+    <script src="js/Question8.js" charset="utf-8"></script>
+
+</body>
+</html>

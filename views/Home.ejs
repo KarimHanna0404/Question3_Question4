@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 1_question8</title>
+    <link rel="stylesheet" href="question8.css"">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <div>
+            <ul class="nav" style="list-style-type: none;">
+                <li><a href="home">Home</a></li>
+                <li><a href="findDogCat">Find a dog/cat</a></li>
+                <li><a href="petCare">Dog/cat care</a></li>
+                <li><a href="petGiveAway" id="giveaway-button">Pet giveaway</a></li>
+                <li><a href="contactUs">Contact us</a></li>
+                <% if (isLoggedIn) { %>
+                    <li><a href="logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="createAccount">Create an account</a></li>
+                <% } %>
+            </ul>
+        </div>
+
+        <div class="movbox"> 
+            <h1>
+                <a href="home.css">
+                    <img src="images/—Pngtree—dog cat pet shovel officer_3934436.png" style="width:75px">
+                </a>
+                Who are we?
+            </h1>
+        
+            <div class="box">
+                <p>Welcome to paws and whiskers, your go-to platform to adopt your very own cat or dog.
+                    Our mission is to connect your loving family with pets in need for a forever home.
+                    <br><br>
+                    With your help and our website we can make it a seamless experience.
+                </p>
+                    <a href="home.css">
+                        <img src="images/b88c50d693e2037e07e2a4c462c4cf5b.png" style="width:75px">
+                    </a>
+                
+            </div>
+        </div>
+
+
+
+    </main>
+
+        <%- include('partials/footer') %> 
+  
+    
+
+        <script src="js/Question8.js" charset="utf-8"></script>
+    
+</body>
+</html>

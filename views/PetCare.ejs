@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Pet Care</title>
+    <link rel="stylesheet" href="question8.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <div>
+            <ul class="nav" style="list-style-type: none;">
+                <li><a href="home">Home</a></li>
+                <li><a href="findDogCat">Find a dog/cat</a></li>
+                <li><a href="petCare">Dog/cat care</a></li>
+                <li><a href="petGiveAway" id="giveaway-button">Pet giveaway</a></li>
+                <li><a href="contactUs">Contact us</a></li>
+                <% if (isLoggedIn) { %>
+                    <li><a href="logout">Log Out</a></li>
+                <% } else { %>
+                    <li><a href="createAccount">Create an account</a></li>
+                <% } %>
+            </ul>
+        </div>
+
+        <div style="position: relative; right: -580px; top: -700px;">
+            <h2>General Instructions to properly take care of your pets:</h2>
+            <p>1. According to the American Veterinary Medical Association you should:</p>
+            <ul>
+                <li>Avoid impulsive decisions when selecting a pet.</li>
+                <li>Select a pet that's suited to your home and lifestyle.</li>
+                <li>Keep only the type and number of pets for which you can provide appropriate food, water, shelter, health care and companionship.</li>
+                <li>Commit to the relationship for the life of your pet(s).</li>
+                <li>Provide appropriate exercise and mental stimulation.</li>
+                <li>Properly socialize and train your pet.</li>
+            </ul>
+            <p>2. Owners should also consider the following:</p>
+            <ul>
+                <li>Recognize that pet ownership requires an investment of time and money.</li>
+                <li>Make sure your pet receives preventive health care (vaccinations, parasite control, etc.), as well as care for any illnesses or injuries.</li>
+                <li>Budget for potential emergencies.</li>
+            </ul>
+            <p>3. Finally, owners should also consider:</p>
+            <ul>
+                <li>Clean up after your pet.</li>
+                <li>Obey all local ordinances, including licensing, leash requirements and noise control.</li>
+                <li>Don't allow your pet to stray or become feral.</li>
+            </ul>
+        </div>
+    </main>
+
+   
+        <%- include('partials/footer') %> 
+ 
+
+    <script src="js/Question8.js" charset="utf-8"></script>
+
+</body>
+</html>
+
